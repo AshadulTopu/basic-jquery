@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sliding effect</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        .para{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>slideDown() slideUp() slideToggle()</h1>
+        <button class="slideDown"> slideDown </button>
+        <button class="slideUp"> slideUp </button>
+        <button class="slideToggle"> slideToggle </button>
+
+        <p class="para">
+            slideDown() slideUp() slideToggle() is jQuery build in method. <br>
+            slideDown()  use for visible to invisible thing with slide Down fade effect<br>
+            slideUp()  use for invisible to visible thing with slide Up fade effect<br>
+            slideToggle()  use for visible and invisible thing with slide fade effect<br>
+        </p>
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // hide 
+            $(".slideDown").click(function () {
+                $(".para").slideDown("slow");
+            });
+
+            // show 
+            $(".slideUp").click(function () {
+                $(".para").slideUp("fast");
+            });
+
+            // toggle
+            $(".slideToggle").click(function () {
+                $(".para").slideToggle("3000");
+            });
+
+        });
+    </script>
+</body>
+
+</html>

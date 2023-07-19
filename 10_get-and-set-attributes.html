@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get content and attributes</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        div{
+            margin: 30px;
+        }
+        p{
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>get and set attributes</h1>
+        <h1> attr() </h1>
+        <button class="text"> show attributes </button>
+        <button class="change"> change attributes </button>
+
+        <h1><a href="www.xyz.com" id="myid">welcome to our site </a></h1>
+        <p class="para"></p>
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // get attr
+            $(".text").click(function () {
+                // alert($("#myid").attr("href"))
+                $(".para").text($("#myid").attr("href"))
+            });
+
+            // change attr
+            $(".change").click(function () {
+                // alert($("#myid").attr("href"))
+                $("#myid").attr("href", "www.google.com")
+            });
+        });
+    </script>
+</body>
+
+</html>

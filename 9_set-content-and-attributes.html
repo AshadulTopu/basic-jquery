@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set content and attributes</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        div{
+            margin: 30px;
+        }
+        p{
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>set content and attributes</h1>
+        <h1>text() html() val()</h1>
+        <button class="text"> set text </button>
+        <button class="html"> set html </button>
+        <button class="value"> set value </button>
+
+        <div>
+            <p class="para"> <strong>Hello World</strong></p>
+            <input type="text" id="input" value="enter your name">
+        </div>
+
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // get innerText
+            $(".text").click(function () {
+                $(".para").text("we are learning js")
+            });
+            
+            // get innerHTML
+            $(".html").click(function () {
+                $(".para").html("<b> we are learning js </b>")
+            });
+
+            //get attributes
+            $(".value").click(function () {
+                 $("#input").val("My name is .....")
+            });
+        });
+    </script>
+</body>
+
+</html>

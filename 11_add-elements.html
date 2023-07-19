@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add element</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        div{
+            margin: 30px;
+        }
+        p{
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>add element</h1>
+        <h1> append() prepend() after() before() </h1>
+
+        <button class="text"> append </button>
+        <button class="text2"> prepend </button>
+        <button class="text3"> before </button>
+        <button class="text4"> after </button>
+
+        <p class="para"> we are learning </p>
+        <p class="para2"> is a javascript </p>
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // append 
+            $(".text").click(function () {
+                $(".para").append("jQuery")
+            });
+
+            // prepend
+            $(".text2").click(function () {
+                $(".para").prepend("hello ")
+            });
+
+            // before
+            $(".text3").click(function () {
+                $(".para2").before("jQuery ")
+            });
+
+            // after
+            $(".text4").click(function () {
+                $(".para2").after("library ")
+            });
+        });
+    </script>
+</body>
+
+</html>

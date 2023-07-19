@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback function</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        .para{
+            width: 80vw;
+            height: 60vh;
+            background: #ddd;
+            position: relative;
+            padding: 30px;
+            margin: 30px;
+        }
+        .inside{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height:  150px;
+            border-radius: 50%;
+            background: purple; 
+        }
+        div{
+            margin: 30px;
+        }
+        p{
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="">
+            <p>
+                callback function is a function where we can pass a function into another function <br>
+                syntax <br>
+                $(selector).action(function(){parameter}, speed , callback) 
+                <br>
+                $(".animation").click(function () {
+                    $(".inside").animate({
+                        left:"90%",
+                        top: "80%",
+                    }, 5000, function(){
+                        //callback code here
+                    });
+                })
+
+                <br>
+                we don't need parameter for every function
+            </p>
+        </div>
+        <h1>callback ()</h1>
+        <button class="animation"> Animation start </button>
+
+        <div class="para">
+            <div class="inside"></div>
+            
+        </div>
+
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // callback
+            $(".animation").click(function () {
+                $(".inside").animate({
+                    left:"90%",
+                    top: "80%",
+                    width: "200px",
+                    height:  "200px",
+                    opacity: "0.6"
+                }, 5000, function(){
+                    alert("this is callback")
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

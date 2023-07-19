@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade method</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        .para{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>fadeIn() fadeOut() fadeToggle() fadeTo()</h1>
+        <button class="fadein"> fadeIn </button>
+        <button class="fadeout"> fadeOut </button>
+        <button class="fadetoggle"> fadeToggle </button>
+        <button class="fadeto"> fadeTo </button>
+
+        <p class="para">
+            fadeIn() fadeOut() fadeToggle() fadeTo() is jQuery build in method. <br>
+            fadeIn()  use for invisible to visible thing with fade effect<br>
+            fadeOut()  use for visible to invisible thing with fade effect<br>
+            fadeToggle()  use for visible and invisible thing with fade effect<br>
+            fadeTo()  fadeTo like fade , but using callback function we can do many thing<br>
+            we can use callback function with all method
+        </p>
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // hide 
+            $(".fadein").click(function () {
+                $(".para").fadeIn("slow");
+            });
+
+            // show 
+            $(".fadeout").click(function () {
+                $(".para").fadeOut("fast");
+            });
+
+            // toggle
+            $(".fadetoggle").click(function () {
+                $(".para").fadeToggle("1000");
+            });
+
+            // 
+            $(".fadeto").click(function () {
+                $(".para").fadeTo("fast", 0.3);
+            });
+        });
+    </script>
+</body>
+
+</html>

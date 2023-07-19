@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chaining</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        .para{
+            width: 80vw;
+            height: 60vh;
+            background: #ddd;
+            position: relative;
+            padding: 30px;
+            margin: 30px;
+        }
+        .inside{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height:  150px;
+            border-radius: 50%;
+            background: purple; 
+        }
+        div{
+            margin: 30px;
+        }
+        p{
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <p>
+                chaining help us write multiple jQuery method in single element
+                <br>
+                syntax:  <br>
+                $(".inside").css("background", "blue").slideUp(3000).slideDown(3000)
+                <br>
+                here I write 3 method in 1 selector
+            </p>
+        </div>
+        <h1>callback ()</h1>
+        <button class="animation"> click here </button>
+
+        <div class="para">
+            <div class="inside"></div>
+            
+        </div>
+
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // chaining
+            $(".animation").click(function () {
+                $(".inside").css("background", "blue").slideUp(3000).slideDown(3000)
+            });
+
+            // we don't need write it single line
+            // we can write it like this
+            // $(".animation").click(function () {
+            //     $(".inside")
+            //.css("background", "blue")
+            //.slideUp(3000)
+            //.slideDown(3000)
+            // });
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show hide toggle</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>hide() show() toggle() </h1>
+        <button class="hide"> hide </button>
+        <button class="show"> show </button>
+        <button class="toggle"> toggle </button>
+
+        <p class="para">
+            hide() show() and toggle() is jQuery build in method. <br>
+            hide() method hide anything when event is occurred  <br>
+            show() method show anything when event is occurred  <br>
+            toggle() method show and hide anything when event is occurred <br>
+
+            we can also use animation with those (here I use "slow")
+        </p>
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // hide 
+            $(".hide").click(function () {
+                $(".para").hide("slow");
+            });
+
+            // show 
+            $(".show").click(function () {
+                $(".para").show("slow");
+            });
+
+            // toggle
+            $(".toggle").click(function () {
+                $(".para").toggle("fast");
+            });
+        });
+    </script>
+</body>
+
+</html>
