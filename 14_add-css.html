@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> add css</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        div{
+            margin: 30px;
+        }
+        p{
+            font-size: 22px;
+        }
+        .parent{
+            width: 600px;
+            height: 600px;
+            background: palegreen;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1> css() </h1>
+
+        <button class="text"> add style </button>
+    </div>
+    <div class="parent">
+        <h1>This is parent</h1>
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // add css
+            $(".text").click(function () {
+                $(".parent").css({'background':'purple','border':'10px solid #000', 'color':'#fff'})
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> add remove toggle class</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        div{
+            margin: 30px;
+        }
+        p{
+            font-size: 22px;
+        }
+        .parent{
+            width: 600px;
+            height: 600px;
+            background: palegreen;
+        }
+        .new-style{
+            background: purple;
+            /* border: 20px dashed salmon; */
+            border-radius: 30px;
+        }
+        .new-style h1{
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1> add() remove() toggle() </h1>
+
+        <button class="text"> add style </button>
+        <button class="text2"> remove style </button>
+        <button class="text3"> toggle style </button>
+    </div>
+    <div class="parent">
+        <h1>This is parent</h1>
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // add class
+            $(".text").click(function () {
+                $(".parent").addClass('new-style')
+            });
+
+            // remove class 
+            $(".text2").click(function () {
+                $(".parent").removeClass('new-style')
+            });
+
+            // toggle class 
+            $(".text3").click(function () {
+                $(".parent").toggleClass('new-style')
+            });
+        });
+    </script>
+</body>
+
+</html>

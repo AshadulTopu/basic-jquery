@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove element</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        div{
+            margin: 30px;
+        }
+        p{
+            font-size: 22px;
+        }
+        .parent{
+            width: 600px;
+            height: 600px;
+            background: palegreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>remove element</h1>
+        <h1> remove() empty() </h1>
+
+        <button class="text"> remove </button>
+        <button class="text2"> empty </button>
+
+        <p>remove () method remove all data for it's define element</p>
+        <p>empty () method remove child data for it's define </p>
+    </div>
+    <div class="parent">
+        <h1>This is parent</h1>
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // remove
+            $(".text").click(function () {
+                $(".parent").remove()
+            });
+
+            // empty
+            $(".text2").click(function () {
+                $(".parent").empty()
+            });
+        });
+    </script>
+</body>
+
+</html>

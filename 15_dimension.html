@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> find dimension</title>
+    <style>
+        body {
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            height: 100vh;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+        }
+        div{
+            margin: 30px;
+        }
+        p{
+            font-size: 22px;
+        }
+        .parent{
+            /* width: 1000px;
+            height: 600px; */
+            background: palegreen;
+            margin: 80px 40px;
+            padding: 60px 40px;
+            border: 30px solid silver;
+        }
+        .parent h1{
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1> width() height() innerWidth()  innerHeight() outerWidth() outerHeight() outerWidth(true) outerHeight(true)</h1>
+        <p>
+            width() show text width <br>
+             height() show text height <br>
+             innerWidth() show width with padding <br>
+             innerHeight() show height with padding <br>
+             outerWidth() show width with border <br>
+             outerHeight() show height with border <br>
+             outerWidth(true) show width with margin <br>
+             outerHeight(true) show height with margin 
+        </p>
+
+        <button class="text"> get dimension </button>
+        <p class="text2"></p>
+
+    </div>
+    <div class="parent">
+        <h1>This is parent</h1>
+    </div>
+
+    <!-- jQuery file -->
+    <script src="jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $(".text").click(function () {
+                var val = '';
+                val += "width is :" +  $('.parent').width() +"</br>" 
+                val += "height is :" +  $('.parent').height() +"</br>"
+                val += "inner width is :" +  $('.parent').innerWidth() +"</br>"
+                val += "inner height is :" +  $('.parent').innerHeight() +"</br>"
+                val += "outer width is :" +  $('.parent').outerWidth() +"</br>"
+                val += "outer height is :" +  $('.parent').outerHeight() +"</br>"
+                val += "outer width with margin is :" +  $('.parent').outerWidth(true) +"</br>"
+                val += "outer height with margin is :" +  $('.parent').outerHeight(true) +"</br>"
+
+                $('.text2').html(val)
+
+            });
+        });
+    </script>
+</body>
+
+</html>
